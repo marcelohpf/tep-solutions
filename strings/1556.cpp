@@ -1,28 +1,27 @@
 #include <iostream>
 
-#include <map>
-
+char letras[] = {'a','b','c','d','e','f','g','h','i',
+                'j','k','l','m','n','o','p','q','r',
+                's','t','u','v','w','x','y','z'};
 using namespace std;
-map<string,bool> letters;
-void rem(string p,int siz){
-    if(!letters[p] && p!=""){
-        string aux;
-        letters[p]=true;
-        for(int i=0; i<siz; i++){
-            aux = p;
-            rem(aux.erase(i,1),siz-1);
+void rem(string p,string actual,int siz,int limit){
+    if( siz >= limit)
+        return;
+    for(int i =0; i<26;i++){
+        int k = p.find_first_of(letras[i]);
+        if(k!=-1){
+            cout << actual << letras[i] << endl;
+            rem(p.substr(k+1,limit),actual+letras[i],siz+1,limit);
         }
     }
+
 }
 
 int main(){
-    string p ;
+    string p;
     while(cin >> p){
-        letters.clear();
-        rem(p,p.size());
-        for (auto c = ++letters.begin(); c!= letters.end(); c++){
-            cout << c->first <<endl;
-        }
+        rem(p,"",0,p.size());
         cout << endl;
     }
+
 }
