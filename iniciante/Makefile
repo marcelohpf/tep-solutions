@@ -1,4 +1,4 @@
-TARGET=1040
+TARGET=1042
 SRC=$(TARGET).cpp
 OBJ=$(SRC:.cpp=.o)
 
