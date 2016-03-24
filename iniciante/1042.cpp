@@ -32,10 +32,7 @@ int main()
     fprintf(stdout, "\n");
 
     for (size_t i = 0; i < 3; i++) {
-        fprintf(stdout, "%d", w.at(i));
-        if (i < 2) {
-            fprintf(stdout, "\n");
-        }
+        fprintf(stdout, "%d\n", w.at(i));
     }
 
     return 0;
