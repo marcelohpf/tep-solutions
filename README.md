@@ -1,15 +1,7 @@
-URI-online judment
+Soluções de questões focadas nos sites de edjuge online, para treinar para maratonas de programação.
 
 Soluções das questões independentemente da linguagem utilizada<br>
-Problemas<br>
-.<br>
-|\\ <br>
-| |-Ad-hoc<br>
-| |-Estruturas e bibliotecas<br>
-| |-Strings<br>
-| |-Matemática<br>
-| |-Paradigmas<br>
-| |-Grafos<br>
-| |-Geometria computacional<br>
-|/<br>
-|-Iniciante
+
+Outro repositório com conteúdo para maratonas:
+https://github.com/edsomjr/TEP/
+
