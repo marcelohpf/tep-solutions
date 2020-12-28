@@ -5,25 +5,24 @@
 
 using namespace std;
 
-bool wayToSort(int i, int j) { return i > j; }
-
 int main()
 {
     cout.sync_with_stdio(false);
     cin.sync_with_stdio(false);
     cout << fixed << setprecision(PRECISION);
 
-    int a, b, c, d; cin >> a >> b >> c >> d;
+    int hi, mi, hf, mf;
+    cin >> hi >> mi >> hf >> mf;
 
     int horas = 0;
     int minutos = 0;
 
-    horas = c - a;
-    if (horas <= 0) {
+    horas = hf - hi;
+    if (horas <= 0 && mi >= mf) {
         horas += 24;
     }
 
-    minutos = d - b;
+    minutos = mf - mi;
     if (minutos < 0) {
         minutos += 60;
         horas--;
